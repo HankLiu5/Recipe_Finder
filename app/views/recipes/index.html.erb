@@ -1,6 +1,5 @@
 <title><%= @keyword %></title>
 <h1>Searching for - <%= @keyword %></h1>
-<p>Powered By Food2Fork.com</p>
 
 <table border="1">
   <tr>
@@ -10,8 +9,8 @@
   </tr>
   <% @recipes.each do |recipe| %>
     <tr class=<%= cycle('even', 'odd') %>>
-      <td><%= image_tag(recipe["image_url"])%></td>
-      <td><%= recipe["title"] %></td>
+      <td><a href=<%= recipe["f2f_url"]%>><%= image_tag(recipe["image_url"], size: "100x100")%></a></td>
+      <td><%= sanitize recipe["title"] %></td>
       <td><%= recipe["social_rank"] %></td>
     </tr>
   <% end %>
