@@ -1,5 +1,5 @@
 ENV["FOOD2FORK_KEY"] = "7cba46c16a69ad6ce8a2126e55a52391"
-ENV['FOOD2FORK_SERVER_AND_PORT'] = 'www.food2fork.com'
+ENV['FOOD2FORK_SERVER_AND_PORT'] = 'food2fork.com:80'
 class Recipe
   include HTTParty
 
